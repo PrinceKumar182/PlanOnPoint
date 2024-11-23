@@ -1,0 +1,577 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f9f9f9;
+    color: #000;
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 0.5rem;
+}
+.header-right {
+    margin-left: auto;
+}
+
+.sign-in-button {
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.sign-in-button:hover {
+    background-color: #dd4e16;
+    color: #fff;
+}
+
+.site-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-center {
+    flex-grow: 1;
+    text-align: center;
+}
+
+
+.nav-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Box */
+.main-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75vh;
+    text-align: center;
+    background-color: #000;
+    padding: 2rem;
+}
+
+.main-box h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.highlight {
+    color: #dd4e16;
+}
+
+.main-box h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    max-width: 80%;
+}
+
+.get-started-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.get-started-button:hover {
+    background-color: #dd4e16;
+    color: #fff;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    width: 60%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 1rem;
+    display: block;
+}
+
+.trip-form input[type="text"], 
+.trip-form input[type="date"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.btn-adjust {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+.btn-adjust:hover {
+    background-color: #ccc;
+}
+
+.budget-info {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0.5rem 0;
+}
+
+.budget-options label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.activity-options label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+
+footer2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9; /* Use the same background as your header */
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer2 .submit-button {
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+footer2 .submit-button:hover {
+    background-color: #dd4e16;
+}
+
+
+/* Sign in page */
+
+/* Form Container Styling */
+.form-container {
+    width: 400px;
+    margin: 5% auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+}
+
+.form-container input[type="text"], 
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.forgot-password {
+    display: block;
+    margin-bottom: 1.5rem;
+    color: #dd4e16;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Button Styling */
+.form-button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #dd4e16;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #dd4e16;
+}
+
+/* Sign-up Prompt */
+.sign-up-prompt {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.sign-up-prompt a {
+    color: #dd4e16;
+    text-decoration: none;
+}
+
+.sign-up-prompt a:hover {
+    text-decoration: underline;
+}
+
+/* Container for Explore Section */
+.container {
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 80%;
+}
+
+h2, p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.tabs span {
+    margin: 0 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.tabs .active {
+    background-color: #dd4e16;
+    color: white;
+}
+
+/* Grid for Destination Cards */
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+}
+
+.overlay h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.overlay p {
+    font-size: 0.9rem;
+}
+
+.image-container img.full-width-image {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.trip-details {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+
+/* trip details */
+
+
+/* Cover Image styling */
+.cover-image-container {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cover-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+/* Hotel Selection styling */
+.hotel-selection {
+    padding: 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.hotel-selection h2 {
+    margin-bottom: 10px;
+}
+
+.hotel-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+.hotel-card {
+    flex: 0 0 auto;
+    width: 150px;
+    text-align: center;
+}
+
+.hotel-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+/* Schedule Section styling */
+.schedule {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.day-schedule {
+    margin-bottom: 20px;
+}
+
+.day-schedule h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.day-schedule p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.day-schedule strong {
+    font-weight: bold;
+}
+
+.day-schedule img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+.color-name{
+    color: #dd4e16;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #111;
+    color: #000;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    flex: 1 1 25%;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #fff; /* Adds a white background */
+    padding: 15px; /* Adds padding around the logo */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for a floating effect */
+}
+
+.footer-logo-img {
+    width: 100px;
+    margin-bottom: 0; /* Adjusts margin so the image aligns well within the padded background */
+}
+
+
+.footer-description {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.footer-contact p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.footer-social {
+    margin-top: 10px;
+}
+
+.social-icon {
+    color: #ccc;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.footer-links {
+    flex: 1 1 70%;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.footer-section {
+    margin: 10px 0;
+}
+
+.footer-section h3 {
+    color: #fff;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #888;
+}

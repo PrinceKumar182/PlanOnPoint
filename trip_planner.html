@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafarYourWay - Trip Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-name">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="Logo" class="logo">
+            </a>
+            <span class="site-name">SafarYourWay</span>
+        </div>
+        <nav class="nav-center">
+            <a href="trip_planner.html" class="nav-link">Trip Planner</a>
+        </nav>
+        <div class="header-right">
+            <a href="signin.html" class="sign-in-button">Sign In</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content-wrapper">
+        <h2>Tell us your travel preferences</h2>
+        <h3>Just provide some basic information, and SafarYourWay will generate a customized itinerary based on your preferences.</h3>
+
+        <form id="tripForm" class="trip-form" action="final.html" method="GET">
+            <label for="start-location">From where do you want to start?</label>
+            <input type="text" id="start-location" name="startLocation" placeholder="Enter starting location" required>
+
+            <label for="destination">What is your destination of choice?</label>
+            <input type="text" id="destination" name="destination" placeholder="Enter destination" required>
+
+            <label for="travel-date">When are you planning to travel?</label>
+            <input type="date" id="travel-date" name="travelDate" required>
+
+            <label>How many days are you planning to travel?</label>
+            <div class="input-group">
+                <button type="button" class="btn-adjust" onclick="adjustCount('days', -1)">-</button>
+                <input type="number" id="days" name="days" value="1" min="1" required>
+                <button type="button" class="btn-adjust" onclick="adjustCount('days', 1)">+</button>
+            </div>
+
+            <label>What is your budget?</label>
+            <p class="budget-info">The budget should be for the overall detail about the trip</p>
+            <div class="budget-options">
+                <label><input type="radio" name="budget" value="low" required> <span>Low (0-8000)</span> 💰</label>
+                <label><input type="radio" name="budget" value="medium"> <span>Medium (8000-20000)</span> 💰</label>
+                <label><input type="radio" name="budget" value="high"> <span>High (20000 and above)</span> 💰</label>
+            </div>
+
+            <label>How many people are planning for the trip?</label>
+            <div class="input-group">
+                <button type="button" class="btn-adjust" onclick="adjustCount('people', -1)">-</button>
+                <input type="number" id="people" name="people" value="1" min="1" required>
+                <button type="button" class="btn-adjust" onclick="adjustCount('people', 1)">+</button>
+            </div>
+
+            <label>What are the activities you are interested in?</label>
+            <div class="activity-options">
+                <label><input type="checkbox" name="activities" value="beaches"> 🏖️ Beaches</label>
+                <label><input type="checkbox" name="activities" value="city-sightseeing"> 🏙️ City sightseeing</label>
+                <label><input type="checkbox" name="activities" value="outdoor-adventures"> 🏕️ Outdoor Adventures</label>
+                <label><input type="checkbox" name="activities" value="events"> 🎉 Events</label>
+                <label><input type="checkbox" name="activities" value="food"> 🍲 Food Exploration</label>
+                <label><input type="checkbox" name="activities" value="nightlife"> 🌃 Nightlife</label>
+                <label><input type="checkbox" name="activities" value="shopping"> 🛍️ Shopping</label>
+                <label><input type="checkbox" name="activities" value="spa"> 🧖 Spa & Wellness</label>
+            </div>
+            
+        </form>
+    </div>
+    <!-- Footer -->
+    <footer2>
+        <button type="button" class="submit-button" onclick="handleSubmit()">Submit</button>
+        <!-- <button class="submit-button">Submit</button> -->
+    
+    </footer2>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script>
+        function handleSubmit() {
+            const selectedBudget = document.querySelector('input[name="budget"]:checked');
+            if (selectedBudget) {
+                let redirectUrl = '';
+                if (selectedBudget.value === 'low') {
+                    redirectUrl = 'trip_details.html';
+                } else if (selectedBudget.value === 'medium') {
+                    redirectUrl = 'trip_details2.html';
+                } else if (selectedBudget.value === 'high') {
+                    redirectUrl = 'trip_details3.html';
+                }
+                
+                // Redirect to the appropriate page
+                window.location.href = redirectUrl;
+            } else {
+                alert("Please select a budget option to proceed.");
+            }
+        }
+    </script>
+</body>
+</html>
